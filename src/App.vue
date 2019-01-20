@@ -1,5 +1,6 @@
 <template>
-  <div id="app" v-loading='$store.state.loading'>
+  <div id="app"
+       v-loading='$store.state.loading'>
     <el-container>
       <el-header>Header{{$store.getters.getRole}}</el-header>
       <el-container>
@@ -16,18 +17,18 @@
 
 <script>
 export default {
-  name: 'App',
-  data () {
-    return {
-      role: 0
+    name: 'App',
+    data () {
+        return {
+            role: 0
+        };
+    },
+    mounted () {
+        setTimeout(() => {
+            // this.loading = false
+        }, 2000);
     }
-  },
-  mounted () {
-    setTimeout(() => {
-      // this.loading = false
-    }, 2000)
-  }
-}
+};
 </script>
 
 <style>
